@@ -1,6 +1,7 @@
 #coding: utf-8
 from __future__ import unicode_literals, absolute_import
 
+from .files import ZipFileField
 from .images import ResizedImageField
 
 try:
