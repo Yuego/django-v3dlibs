@@ -29,6 +29,7 @@ setup(
     packages=[
         'v3d_libs',
         'v3d_libs.fields',
+        'v3d_libs.utils'
     ],
     classifiers=[
         'Development Status :: 1 - Alpha',
