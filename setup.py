@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from distutils.core import setup
+from setuptools import setup, find_packages
 import sys
 sys.path.insert(0, '..')
 
@@ -26,11 +26,7 @@ setup(
         'pillow',
         'six',
     ],
-    packages=[
-        'v3d_libs',
-        'v3d_libs.fields',
-        'v3d_libs.utils'
-    ],
+    packages=find_packages(),
     classifiers=[
         'Development Status :: 1 - Alpha',
         'Intended Audience :: Developers',
