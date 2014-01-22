@@ -24,6 +24,8 @@ setup(
     requires=[
         'django (>=1.3)',
         'pillow',
+        'django_extensions',
+        'phonenumbers',
         'six',
     ],
     packages=find_packages(),
