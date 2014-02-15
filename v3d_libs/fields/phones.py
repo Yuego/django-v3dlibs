@@ -6,7 +6,8 @@ from __future__ import unicode_literals, absolute_import
 from django.core.exceptions import ValidationError
 from django.utils.translation import ugettext_lazy as _
 
-from hstore_editor.fields import DictionaryField
+#from hstore_editor.fields import DictionaryField
+from django_hstore.hstore import DictionaryField
 
 import phonenumbers as p
 from phonenumbers import NumberParseException
@@ -17,6 +18,7 @@ __all__ = ['PhonesField']
 class PhonesField(DictionaryField):
     phone_format = p.PhoneNumberFormat.NATIONAL
 
+    """
     def __init__(self, *args, **kwargs):
         _widget_attrs = {
             'key_label': _('telephone'),
@@ -26,7 +28,7 @@ class PhonesField(DictionaryField):
         }
         kwargs.update(_widget_attrs)
         super(PhonesField, self).__init__(*args, **kwargs)
-
+    """
     def clean(self, value, model_instance):
         value = super(PhonesField, self).clean(value, model_instance)
 
