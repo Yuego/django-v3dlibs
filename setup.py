@@ -27,6 +27,7 @@ setup(
         'django_extensions',
         'phonenumbers',
         'six',
+        'django-hosts',
     ],
     packages=find_packages(),
     classifiers=[
