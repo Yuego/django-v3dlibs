@@ -21,8 +21,8 @@ setup(
     long_description=open('README.rst').read(),
 
     license='MIT license',
-    requires=[
-        'django (>=1.3)',
+    install_requires=[
+        'django >=1.3',
         'pillow',
         'django_extensions',
         'phonenumbers',
