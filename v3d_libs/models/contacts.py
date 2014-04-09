@@ -1,8 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-import six
-
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
@@ -20,7 +18,7 @@ class ContactBase(models.Model):
     email = models.EmailField(_('email'), blank=True)
     phones = PhonesField(_('contact phones'), blank=True, null=True)
 
-    show_contacts = models.BooleanField(u'Адреса и контакты', default=True,
+    show_contacts = models.BooleanField(_('show contacts'), default=True,
         help_text='Отображать контактную и контактную информацию на сайте')
 
     @property
