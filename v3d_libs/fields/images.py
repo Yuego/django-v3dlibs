@@ -1,12 +1,12 @@
 #coding: utf-8
 from __future__ import unicode_literals, absolute_import
 
+import six
 try:
     from PIL import Image, ImageFile
 except ImportError:
     import Image
     import ImageFile
-from StringIO import StringIO
 
 from django.conf import settings
 from django.core.files.base import ContentFile
@@ -21,7 +21,7 @@ __all__ = ['ResizedImageField']
 class ResizedImageFieldFile(ImageField.attr_class):
 
     def save(self, name, content, save=True):
-        new_content = StringIO()
+        new_content = six.StringIO()
         content.file.seek(0)
         thumb = Image.open(content.file)
 
