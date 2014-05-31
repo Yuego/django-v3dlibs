@@ -16,7 +16,7 @@ class BaseInfo(models.Model):
         abstract = True
 
     uuid = UUIDField('UUID')
-    pub_date = CreationDateTimeField(_('upload moment'), editable=True)
+    pub_date = CreationDateTimeField(_('publication date'), editable=True)
     last_modified = ModificationDateTimeField(_('last update'))
     created = CreationDateTimeField(_('created at'))
 
