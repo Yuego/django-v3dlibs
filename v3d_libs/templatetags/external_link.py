@@ -31,3 +31,7 @@ class ELinkNode(template.Node):
 @register.tag
 def elink(parser, token):
     return ELinkNode(parser, token)
+
+@register.filter
+def redirect(link):
+    return reverse_full('redirect', 'redirect', (), {}, (encode_link(link),))
